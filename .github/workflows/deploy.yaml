@@ -8,10 +8,10 @@ permissions:
   id-token: write 
 jobs: 
   deplays:
-   environment:
+  runs-on: ubuntu-lastest
+  environment:
     name: github-pages
 
-    runs-on: ubuntu-Latest
     steps:
       - uses: actions/checkout@v4
 
