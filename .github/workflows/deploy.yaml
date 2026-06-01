@@ -6,11 +6,13 @@ on:
 permissions:
   contents: read
   id-token: write 
+  
 jobs: 
-  deplays:
-  runs-on: ubuntu-lastest
+  deploy:
+  
   environment:
     name: github-pages
+    runs-on: ubuntu-lastest
 
     steps:
       - uses: actions/checkout@v4
@@ -19,7 +21,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-        path: .
+         path: .
 
       - uses: actions/deploy-pages@v4
       
